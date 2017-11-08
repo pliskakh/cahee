@@ -21,7 +21,12 @@ body{
 	outline: 1px dotted fuchsia;
 }
 
+
 /* Typography */
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.2;
+}
+
 h2 {
 	font-size: 90px;
 	font-weight: 700;
@@ -38,8 +43,9 @@ input[type="submit"],
 input[type="button"],
 button,
 .ba-button{
+	font-size: 20px;
 	display: inline-block;
-	border: 0;
+	border: none;
 	text-transform: uppercase;
 	height: 55px;
 	line-height: 55px;
@@ -80,23 +86,25 @@ textarea {
 
 }
 
-.ba-section {
-	
-}
+/* home section */
 
-.ba-intro {
+.ba-home {
 	background: var(--reverse-color) url('../img/bg.jpg') 50%;
 	background-size: cover;
 }
 
-.ba-intro__header {
-	background: linear-gradient(to bottom, rgba(255,255,255,.9) 70%,rgba(255,255,255,0) 100%);
+.ba-home__header {
 	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
 	padding-top: 50px;
-	z-index: 100;
+	z-index: 10;
+	background: linear-gradient(to bottom, rgba(255,255,255,.9) 70%,rgba(255,255,255,0) 100%);
+}
+
+.ba-logo {
+	display: inline-block;
 }
 
 .ba-logo > img {
@@ -118,7 +126,7 @@ textarea {
 }
 
 .ba-menu li:not(:first-child) {
-	padding-left: 35px;
+	padding-left: 33px;
 } 
 
 .ba-menu a {
@@ -136,40 +144,38 @@ textarea {
 	transition: box-shadow .2s ease-in
 }
 
-.ba-intro__body {
-/*	padding-top: 235px;
-	padding-bottom: 395px;*/
+.ba-home__body {
 	position: relative;
-	
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 100vh;
+	/*align-items: center;*/
 }
 
-.ba-intro__descritpion{
+.ba-home__description{
 	max-width: 370px;
 }
 
-.ba-intro__button {
+.ba-home__button {
 	background-color: #ff6033;
 }
 
-.ba-header__title {
-	margin: 0;
+.ba-home__title {
+	margin: 0 0 12px;
 	font-size: 60px;
 	font-weight: 800;
 }
 
-.ba-header__subtitle {
+.ba-home__subtitle {
 	margin: 0;
-	padding-bottom: 27px;
+	padding-bottom: 28px;
 }
 
 .ba-scroll {
 	position: absolute;
 	
-	bottom: 65px;
+	bottom: 69px;
 	left: 50%;
 	width: 24px;
 	height: 40px;
@@ -177,58 +183,62 @@ textarea {
 	background: url('../img/scroll.svg');
 }
 
-.ba-about-us{
+/* about section */
+
+.ba-about {
 	background-color: #00c4c4;
 	background: -webkit-radial-gradient(circle farthest-side at 50%, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 31%, rgba(0, 173, 173, 0.9) 67%, rgba(0, 156, 156, 0.9) 100%);
 	background: -moz-radial-gradient(circle farthest-side at 50%, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 31%, rgba(0, 173, 173, 0.9) 67%, rgba(0, 156, 156, 0.9) 100%);
 	background: -o-radial-gradient(circle farthest-side at 50%, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 31%, rgba(0, 173, 173, 0.9) 67%, rgba(0, 156, 156, 0.9) 100%);
 	background: -ms-radial-gradient(circle farthest-side at 50%, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 31%, rgba(0, 173, 173, 0.9) 67%, rgba(0, 156, 156, 0.9) 100%);
 	background: radial-gradient(circle farthest-side at 50%, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 31%, rgba(0, 173, 173, 0.9) 67%, rgba(0, 156, 156, 0.9) 100%);
-
 	color: var(--reverse-color);
-
 }
 
-.ba-about-us__content{
-	padding: 135px 0 100px 100px;	
+.ba-about__content{
+	padding: 160px 0 207px 70px;	
 }
 
-.ba-about-us__title{
-	margin: 0 0 7px;	
+.ba-about__title{
+	margin: 0 0 5px;	
 }
 
-.ba-about-us img {
+.ba-about img {
 	padding-top: 70px;
 }
 
-.ba-about-us__content p {
+.ba-about__content p {
 	margin: 0 0 15px;
 }
 
-.ba-our-services {
+
+/* services section */
+
+.ba-services {
 	background-color: #70bfff;
+	padding: 100px 0 135px;
 }
-.ba-our-services__title {
+.ba-services__title {
 	background: url(../img/tomato.png) center center no-repeat;
 	background-size: ;
-	padding: 220px 0 220px 24px;
+	padding: 210px 0 210px 24px;
 	margin: 0;
 }
 
-.ba-our-services__list{
+.ba-services__list{
 	list-style: none;
 	padding-left: 100px;
-	padding-top: 80px;
+	padding-top: 60px;
 }
 
-.ba-our-services__item{
+.ba-services__item{
 	max-width: 400px;	
 	font-size: 0;
 	background-color: var(--reverse-color);
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);	
 }
 
-.ba-our-services__item:not(:last-child){
+.ba-services__item:not(:last-child){
 	margin-bottom: 20px;
 }
 
