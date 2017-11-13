@@ -419,7 +419,7 @@ textarea {
 	filter: blur(5px);
 }
 
-time {
+.ba-blog__article time {
 	border-radius: 5px;
 	background-color: rgba(38, 38, 38, 0.5);
 	width: 60px;
@@ -440,7 +440,7 @@ time {
 
 }
 
-time span {
+.ba-blog__article time span {
 	font-size: 21px;
 }
 
@@ -458,8 +458,6 @@ time span {
 	padding: 18px 20px;
 }
 
-
-
 .ba-shadow h6 {
 	margin: 0;
 	text-align: left;
@@ -470,22 +468,19 @@ time span {
 	padding-bottom: 10px;
 }
 
-
 .ba-shadow p{
-
 	color: #ffffff;
 	font-size: 13px; 
 	font-weight: 300;
 	line-height: 25px; 
-
 }
 
 
-/* contact section */
+/* CONTACT section */
 .ba-contact {
 	background: #ccc url('../img/contacts-bg.png') center no-repeat;
 	background-size: cover;
-	padding: 40px 0 120px;
+	padding: 40px 0 30px;
 }
 
 .ba-contact__content {
@@ -542,21 +537,26 @@ time span {
 .ba-address p {
 	font-size: 17px;
 	font-weight: 700;
-	margin: 5px 0 0;
-	line-height: 1.2;
+	margin: 6px 0 0;
+	line-height: 1.1;
 }
 
+.ba-address__item {
+	padding-bottom: 9px;
+}
+
+.ba-address a,
 .ba-address span {
 	font-size: 20px;
 	font-weight: 300;
+	line-height: 1;
+	padding-bottom: 5px;
 }
-
-
 
 /* footer section */
 .ba-footer {
 	background-color: var(--main-color);
-	padding: 32px 0;
+	padding: 16px 0;
 }
 
 .ba-footer__content {
@@ -572,10 +572,4 @@ time span {
 	color:  #ff2b58;
 	font-size: 15px;
 }
-
-
-
-
-
-
 
